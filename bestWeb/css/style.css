@@ -1,0 +1,437 @@
+/*this is a comment in css*/
+/*general styling for all pages*/
+
+@charset "utf-8"
+/*the asterisk is the universal selector which selects every element*/
+
+*,*:before,*:after {
+    margin:0; 
+    padding:0;
+}
+
+
+#video-bg-elem
+-webkit-
+-moz-
+-o-
+{
+    position: fixed;
+    z-index:-1000;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    min-height: 100%;
+    min-width: 100%;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+}
+
+#content
+-webkit-
+-moz-
+-o-{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    z-index:1000;
+    background-color: rgba(255, 255, 255, 0.5);
+    overflow:hidden;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+}
+
+#container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 3% 4%;
+}
+
+.clearfix:after{
+    content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+
+iframe {
+    position: relative;
+    width:100%;
+    height:300px;
+    min-height: 100%;
+    min-width: 100%;
+    top: 0;
+    bottom: 0;
+}
+
+a{    
+    text-decoration:none;
+    color: #000;
+    font-weight: 800;
+}
+
+a:hover {
+    text-decoration:none;
+    color: saddlebrown;
+    transition: color 500ms;   
+}
+
+/*navigation Start*/
+
+.menu{
+    text-align: center;
+    letter-spacing: 0.3em;
+    line-height: 1.5em;
+    color:#000;
+    padding-top: 15%;
+/*    margin-bottom: 10px;*/
+}
+
+#navigation {
+    position: fixed;
+    text-align: center;
+    display: block;
+    width: 15%;
+}
+
+#navigation a:link { 
+    text-decoration:none;
+    font-size: 1.5em;
+    font-family:monospace;
+    transition: color 500ms;
+}
+
+#navigation li {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    line-height: 0.7em;
+    
+}
+
+#navigation ul {
+    color: rgba(0,0,0,0.7);
+    padding: 13% 0 13% 0;
+
+    margin-top: 10%;
+}
+
+#navigation ul:hover{
+    opacity: 0.4;
+    transition: 700ms;
+}
+
+#videoContent{
+    position: relative;
+    width: 95%; 
+    margin: 0 2% 0 0;
+}
+
+
+#mainContent {
+    float: left;
+}
+h1, h2, h3, h4 {
+    font-family: monospace;
+    letter-spacing: .1em;
+}
+
+h1{
+    font-size: 2em;
+}
+
+h2{
+    font-size: 1em
+}
+
+h4, h3{
+    text-align: center;
+}
+
+.h4{
+    top:120%;
+    position: absolute;
+    color: aliceblue;
+    margin-left: 2.5%;
+}
+
+p { 
+    color: #fff;
+    padding:1%;
+    word-spacing: .3em;
+    line-height: 1.5em;
+    font-family: sans-serif;
+    text: 1%;
+    margin: 2em;
+}
+
+img { 
+    max-width:100%;
+}
+
+#sideBar, p {
+    position: relative;
+    background-color: #000;
+    padding: 1%;
+    font-family:monospace;
+    font-size: 1.1em;
+    line-height: 1.4em;
+    float: left;
+}
+
+#sideBar ul li a{
+    color:aliceblue;
+}
+
+#footer {
+    background-color: #000;
+    color:#fff;
+    float: left;
+    width:100%;
+}
+
+#footer .footer{
+       display: none;
+    }
+
+.policy{
+        clear:both;
+    }
+
+/*start responsive navigation*/
+
+@font-face {
+    font-family: "responsivenav";
+    src:url("../icons/responsivenav.eot");
+    src:url("../icons/responsivenav.eot?#iefix") format("embedded-opentype"),
+    url("../icons/responsivenav.ttf") format("truetype"),
+    url("../icons/responsivenav.woff") format("woff"),
+    url("../icons/responsivenav.svg#responsivenav") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "responsivenav";
+    src:url("../icons/responsivenav.eot");
+    src:url("../icons/responsivenav.eot?#iefix") format("embedded-opentype"),
+    url("../icons/responsivenav.ttf") format("truetype"),
+    url("../icons/responsivenav.woff") format("woff"),
+    url("../icons/responsivenav.svg#responsivenav") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.nav-toggle {
+    position: fixed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-decoration: none;
+    text-indent: -999px;
+    position: relative;
+    overflow: hidden;
+    width: 70px;
+    height: 80px;
+    float: right;
+    margin-top: 3%;
+}
+
+.nav-toggle:before {
+    color: #000;  Edit this to change the icon color 
+    font-family: "responsivenav", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    font-size: 28px;
+    text-transform: none;
+    position: absolute;
+    content: "≡";
+    text-indent: 0;
+    text-align: center;
+    line-height: 55px;
+    speak: none;
+    width: 100%;
+    top: 10px;
+    left: 10px;    
+}
+
+.nav-toggle.active::before {
+    font-size: 24px;
+    content:"x";
+}
+.nav-collapse{
+    padding-right: 10%;
+    padding-left: 4%
+}
+
+/*End of responsive navigation*/
+
+/*Start slideshow*/
+
+#slides {
+     display: none;
+     margin-top: 1%;
+}
+
+#slides .slidesjs-navigation {
+      margin: 15px 1px;
+}
+
+a.slidesjs-next {
+    margin-right:10px;
+    background-position: -12px 0;
+}
+
+a:hover.slidesjs-next {
+    background-position: -12px -18px;
+}
+
+a.slidesjs-previous {
+    background-position: 0 0;
+}
+
+a:hover.slidesjs-previous {
+    background-position: 0 -18px;
+}
+
+a.slidesjs-play {
+    width:15px;
+    background-position: -25px 0;
+}
+
+a:hover.slidesjs-play {
+    background-position: -25px -18px;
+}
+
+a.slidesjs-stop {
+    width:18px;
+    background-position: -41px 0;
+}
+
+a:hover.slidesjs-stop {
+    background-position: -41px -18px;
+}
+
+.slidesjs-pagination {
+    margin-top: 1%;
+    margin-right: 40%;
+    float: right;
+    list-style: none;
+}
+
+.slidesjs-pagination li {
+    float: right;
+    margin: 0 10px;
+    animation: imagenes 18s linear infinite; 
+}
+
+.slidesjs-pagination li a {
+    display: block;
+    width: 13px;
+    height: 0;
+    padding-top: 13px;
+    background-image: url(../images/apple.gif);
+    background-position: 0 0;
+    float:left;
+    overflow: hidden;
+    background-color: #F0F9FF;
+}
+
+.slidesjs-pagination li a.active,
+.slidesjs-pagination li a:hover.active {
+    background-position: 0 -13px;
+}
+
+.slidesjs-pagination li a:hover {
+    background-position: 0 -26px;
+}
+
+#slides a:link,
+#slides li a:visited {
+    color:white;
+}
+
+#slides li a:hover,
+#slides a:active {
+    color: black;
+}
+
+.navbar {
+    overflow: hidden;
+}
+
+/*finished slideshow*/
+
+
+/*Start screen for tablet*/
+
+@media (min-width:40em){
+    
+    h3, h2{
+        font-size: 2em;
+    
+    }
+    h1{
+        font-size: 3em;
+        margin-top: -0.5%;
+    }
+    
+    h4{ 
+        font-size: 2em;
+    }
+    
+    #mainContent {
+        float: left;
+        margin-right: 1%;
+    }
+    
+    
+/*    #footer{margin-top: 800px}*/
+    
+    #footer .footer{
+        width:90%;
+        float: left;
+        margin-top:10px;
+        clear:both;
+        display: table;
+         
+    }
+
+    #footer .footer ul { 
+        opacity: 0.6;
+        background-color: #fff;
+        font-size: 0.8em;
+        white-space:nowrap;
+        list-style-type: none;
+        text-transform: uppercase;
+        line-height: 30px;
+        color: #fff;
+        padding: 0;
+        float: left;
+        display: block;
+        margin-right: 6%;
+        margin-left: 2%;    
+        width: 13%;
+        letter-spacing: 0.1em; 
+        padding: 2%
+        }
+    
+    #footer .footer ul li{margin-left: 4%}
+
+}
+
+/*start screen for dacktop*/
+
+@media (min-width:70em){
+
+}
+
+ 
