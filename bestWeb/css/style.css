@@ -11,9 +11,6 @@
 
 
 #video-bg-elem
--webkit-
--moz-
--o-
 {
     position: fixed;
     z-index:-1000;
@@ -29,9 +26,7 @@
 }
 
 #content
--webkit-
--moz-
--o-{
+{
     position: absolute;
     width: 100%;
     min-height: 100%;
